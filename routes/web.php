@@ -6,6 +6,7 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\DetailsComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,8 @@ Route::get('/Shop',ShopComponent::class);
 Route::get('/Cart',CartComponent::class);
 
 Route::get('/Checkout',CheckoutComponent::class);
+
+Route:: get('/product/{slug}', DetailsComponent::class)->name('product.details');
 
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
