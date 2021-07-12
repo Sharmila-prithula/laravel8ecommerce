@@ -1,15 +1,16 @@
 <div>
     <style>
-        nav svg{
+        nav svg {
             height: 20px;
         }
-        nav .hidden{
+
+        nav .hidden {
             display: block !important;
         }
     </style>
     <div class="container" style="padding: 30px 0;">
         <div class="row">
-            <div class="col-md-12"> 
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
@@ -23,6 +24,10 @@
                     </div>
                     <div class="panel-body">
                         <table class="table table-striped">
+                            @if(Session::has('message'))
+                            <div class="alert alert-success" role="alert">{{Session::get('message')}}
+                            </div>
+                            @endif
                             <thead>
                                 <tr>
                                     <th>Id</th>
@@ -37,6 +42,10 @@
                                     <td>{{$category->id}}</td>
                                     <td>{{$category->name}}</td>
                                     <td>{{$category->slug}}</td>
+                                    <td>
+                                        <a href="{{route('admin.editcategory',['category_slug'=>$category->slug])}}"><i class="fa fa-edit fa-2x"></i></a>
+                                        <a href="#" wire:click.prevent="deleteCategory({{$category->id}})"><i class="fa fa-times fa-2x"></i></a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
