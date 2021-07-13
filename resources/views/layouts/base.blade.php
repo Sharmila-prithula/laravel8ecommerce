@@ -67,11 +67,14 @@
 										<li class="menu-item">
 											<a title="Categories" href="{{ route('admin.categories')}}">Categories</a>
 										</li>
+										<li class="menu-item">
+											<a title="Products" href="{{ route('admin.products') }}">All Products</a>
+										</li>
 										<form id="logout-form" method="POST" action="{{ route('logout') }}">
 											@csrf
-										<li class="menu-item">
-											<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-										</li>
+											<li class="menu-item">
+												<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+											</li>
 
 										</form>
 									</ul>
@@ -85,9 +88,9 @@
 										</li>
 										<form id="logout-form" method="POST" action="{{ route('logout') }}">
 											@csrf
-										<li class="menu-item">
-											<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-										</li>
+											<li class="menu-item">
+												<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+											</li>
 
 										</form>
 									</ul>
