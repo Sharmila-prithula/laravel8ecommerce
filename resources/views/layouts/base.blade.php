@@ -70,6 +70,9 @@
 										<li class="menu-item">
 											<a title="Products" href="{{ route('admin.products') }}">All Products</a>
 										</li>
+										<li class="menu-item">
+											<a title="Manage Home Slider" href="{{ route('admin.homeslider') }}">Manage Home Slider</a>
+										</li>
 										<form id="logout-form" method="POST" action="{{ route('logout') }}">
 											@csrf
 											<li class="menu-item">
@@ -459,6 +462,7 @@
 	<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
 	<script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
 	<script src="{{ asset('assets/js/functions.js') }}"></script>
+	<script src="https://cdn.tiny.cloud/1/ppg82n2ul5f8tynv3pco368mcnbm4a3v1kwyzetrmon17nsa/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 	@livewireScripts
 </body>
 
